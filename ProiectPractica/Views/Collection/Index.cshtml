@@ -1,0 +1,49 @@
+﻿@model IEnumerable<LibraryData.Models.MovieCollection>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Create New List</a>
+</p>
+
+<div class="container">
+
+        @foreach (var collection in Model)
+        {
+        
+            <div style="border: 1px solid #bdbdbd; width: 90%; border-radius: 4px; margin-top: 40px; padding: 8px;"> 
+                @collection.Name
+                <a  style="padding-left:80%" asp-action="Delete" asp-route-id="@collection.Id">Delete List</a>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td> Title</td>
+                        <td>Genre</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in collection.Movies)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Genre)
+                            </td>
+                            <td>
+                                <a asp-action="DeleteFromCollection" asp-route-id="@item.Id">Remove from list</a> 
+                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+         }
+
+</div>

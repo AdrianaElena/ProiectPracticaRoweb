@@ -1,0 +1,15 @@
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\bin\Debug\net5.0\LibraryData.deps.json
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\bin\Debug\net5.0\LibraryData.runtimeconfig.json
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\bin\Debug\net5.0\LibraryData.runtimeconfig.dev.json
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\bin\Debug\net5.0\LibraryData.dll
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\bin\Debug\net5.0\ref\LibraryData.dll
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\bin\Debug\net5.0\LibraryData.pdb
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.csprojAssemblyReference.cache
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.AssemblyInfoInputs.cache
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.AssemblyInfo.cs
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.dll
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\ref\LibraryData.dll
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.pdb
+C:\Users\adria\source\repos\ProiectPractica\LibraryData\obj\Debug\net5.0\LibraryData.genruntimeconfig.cache
