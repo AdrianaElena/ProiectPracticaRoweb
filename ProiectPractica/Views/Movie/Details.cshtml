@@ -1,4 +1,4 @@
-﻿@model LibraryData.Models.Movie
+﻿@model ProiectPractica.Models.MovieReviewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -11,32 +11,86 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Movie.Title)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+            @Html.DisplayFor(model => model.Movie.Title)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ReleaseDate)
+            @Html.DisplayNameFor(model => model.Movie.ReleaseDate)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ReleaseDate)
+            @Html.DisplayFor(model => model.Movie.ReleaseDate)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Genre)
+            @Html.DisplayNameFor(model => model.Movie.Genre)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Genre)
+            @Html.DisplayFor(model => model.Movie.Genre)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
+            @Html.DisplayNameFor(model => model.Movie.Price)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Price)
+            @Html.DisplayFor(model => model.Movie.Price)
         </dd>
     </dl>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Movie.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+    <br />
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movie.Reviews[0].UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movie.Reviews[0].ReviewText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Movie.Reviews[0].ReviewDate)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var review in Model.Movie.Reviews)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => review.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => review.ReviewText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => review.ReviewDate)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <div>
+        @using (Html.BeginForm("AddReview", "Movie", FormMethod.Post))
+        {
+            @Html.HiddenFor(m => m.Id)
+            <div class="container-lg">
+                Name
+                @Html.TextBoxFor(m => m.UserName, new { @required = "required" })
+                <br /><br />
+                Review
+                @Html.TextAreaFor(m => m.ReviewText, new { @required = "required" })
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-info btn-sm">Add Review</button>
+            </div>
+        }
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+

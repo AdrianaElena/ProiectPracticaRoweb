@@ -5765,11 +5765,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\LibraryData\\LibraryData.csproj",
+      "projectUniqueName": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\LibraryData\\LibraryData.csproj",
       "projectName": "LibraryData",
-      "projectPath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\LibraryData\\LibraryData.csproj",
+      "projectPath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\LibraryData\\LibraryData.csproj",
       "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\LibraryData\\obj\\",
+      "outputPath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\LibraryData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

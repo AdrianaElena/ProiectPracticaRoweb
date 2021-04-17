@@ -21,31 +21,46 @@ namespace ProiectPractica.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string searchString, string sortOrder, int? pageNumber)
         {
-            IQueryable<string> genreQuery = from m in _context.Movies orderby m.Genre select m.Genre;
+            ViewData["TitleSortParam"] = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+            ViewData["DateSortParam"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CurrentSort"] = sortOrder;
 
             var movies = from m in _context.Movies select m;
+
+            if(searchString!= null)
+            {
+                pageNumber = 1;
+            }
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 movies = movies.Where(s => s.Title.Contains(searchString));
             }
 
-            if (!string.IsNullOrEmpty(movieGenre))
+            switch (sortOrder)
             {
-                movies = movies.Where(x => x.Genre == movieGenre);
+                case "title_desc":
+                    movies = movies.OrderByDescending(m => m.Title);
+                    break;
+                case "Date":
+                    movies = movies.OrderBy(m => m.ReleaseDate);
+                    break;
+                case "date_desc":
+                    movies = movies.OrderByDescending(m => m.ReleaseDate);
+                    break;
+                default:
+                    movies = movies.OrderBy(m => m.Title);
+                    break;
             }
 
-            var movieGenreModel = new MovieGenreModel
-            {
-                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Movies = await movies.ToListAsync()
-            };
 
-            return View(movieGenreModel);
+            int pageSize = 3;
+
+            return View(await PaginatedList<Movie>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
-
+            
 
         // GET: Movies/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -56,13 +71,39 @@ namespace ProiectPractica.Controllers
             }
 
             var movie = await _context.Movies
+                .Include(m=>m.Reviews)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
                 return NotFound();
             }
 
-            return View(movie);
+            var model = new MovieReviewModel
+            {
+                Movie = movie,
+                Id = movie.Id
+            };
+
+            return View(model);
+        }
+
+        public IActionResult AddReview(int id, string userName, string reviewText)
+        {
+
+            var review = new Review
+            {
+                UserName = userName,
+                ReviewText = reviewText,
+                ReviewDate = DateTime.Today
+            };
+
+            var movie = _context.Movies
+               .Include(m => m.Reviews)
+               .FirstOrDefault(m => m.Id == id);
+            movie.Reviews.Add(review);
+            _context.SaveChanges();
+
+            return RedirectToAction("Details", new { id = id });
         }
 
         // GET: Movies/Create

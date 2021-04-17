@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3yjUsyTRXprE5sCTafFVpJuJrEE3EPpzgMklAnMb/TjvmdB+tPNzybPnUfzP+iR0ahHdlwuZQe/pLMkYD9PfYw==",
+  "dgSpecHash": "epHS9AvK0SmrVRH9KkTpaj9utXD4mJRYF+hHgpGMkHpq9OwCqwJSdl9RUjrVtqaImdXZEkwBfRRz9IutF+BJVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\LibraryData\\LibraryData.csproj",
+  "projectFilePath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\LibraryData\\LibraryData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

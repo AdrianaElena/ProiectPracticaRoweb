@@ -9,5 +9,6 @@ namespace LibraryData
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MovieCollection> MovieCollections { get; set; }
+        public DbSet<Review> Reviews { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MBNxyup7iHu8krz+DFfQoU0ixEGUmk7/4bCqssF//4ZtWmloPXf84wlpTxRQ1iTD7hV2j8uScWVQNiBlYvANKw==",
+  "dgSpecHash": "de0YgMqBXX7YzdTzjg8RXDLx9R6dUDIHytkE2LjYrrEyG8xhRSrH3OWh9eQYFyWTHaIJBOwbgs2z6I6PQYBkzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\ProiectPractica\\ProiectPractica.csproj",
+  "projectFilePath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\ProiectPractica\\ProiectPractica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

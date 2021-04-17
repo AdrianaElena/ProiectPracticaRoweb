@@ -7104,11 +7104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\ProiectPractica\\ProiectPractica.csproj",
+      "projectUniqueName": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\ProiectPractica\\ProiectPractica.csproj",
       "projectName": "ProiectPractica",
-      "projectPath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\ProiectPractica\\ProiectPractica.csproj",
+      "projectPath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\ProiectPractica\\ProiectPractica.csproj",
       "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\ProiectPractica\\obj\\",
+      "outputPath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\ProiectPractica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7128,8 +7128,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\LibraryData\\LibraryData.csproj": {
-              "projectPath": "C:\\Users\\adria\\Source\\Repos\\ProiectPracticaRoweb\\LibraryData\\LibraryData.csproj"
+            "C:\\Users\\adria\\source\\repos\\ProiectPractica\\LibraryData\\LibraryData.csproj": {
+              "projectPath": "C:\\Users\\adria\\source\\repos\\ProiectPractica\\LibraryData\\LibraryData.csproj"
             }
           }
         }
